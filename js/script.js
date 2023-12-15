@@ -442,6 +442,7 @@ document
     startQuizTimer(); // Start the timer when the quiz starts
     document.getElementById('quiz-content').style.display = 'block'; // Show the quiz
     document.getElementById('quiz-start-text').style.display = 'none'; // Hide the start text
+    document.getElementById('simple-quiz-header').style.display = 'none'; // Hide the start text
     loadQuestion(0); // Load the first question
     this.style.display = 'none'; // Hide the start button
   });

@@ -8,11 +8,11 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
-  <title>Simple Quiz App Test</title>
+  <title>Simple Quiz App</title>
 </head>
 <body>
   <div id="quiz-container">
-    <h1 >Simple Quiz App</h1>
+    <h1 id="simple-quiz-header">Simple Quiz App</h1>
     <button class="btn btn-primary" id="quiz-start-btn">Start Quiz</button>
     <p id="quiz-start-text">
       <b>Time</b>: 5 Minutes,
@@ -21,8 +21,12 @@
       along with options to either retake the quiz or download your results as a PDF report.</p>
 
     <div id="quiz-content">
-      <div id="quiz-timer-container"> Time Remaining
+      <div id="header"> <!--New "header" container for the quiz sub-title and timer-->
+        <div id="title">Simple Quiz App</div>  <!--Sub-Title-->
+        <div id="quiz-timer-container">Time Left 
         <div id="quiz-timer"></div></div>
+      </div>
+
       <div id="progress"></div>
 
       <div id="question"></div>
