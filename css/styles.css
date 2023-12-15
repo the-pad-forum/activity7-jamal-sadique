@@ -89,11 +89,25 @@ div {
   color: rgb(255, 255, 255);
 }
 
+/* PROGRESS BAR */
+#progress-container {
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  margin-left: -6%;
+  margin-right: -6%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.192);
+}
+
 #progress-bar {
-  border-top: 2px solid blue;
-  margin:0 -2rem;
-  margin-top: 15;
-  text-shadow: 10px 10px;
+  height: 100%;
+  background-color: #2a3fe1;
+  animation: progress-animation 299s forwards;
+}
+
+@keyframes progress-animation {
+  0% {width: 0%;}
+  100% {width: 100%;}
 }
 
 /* Progress & Next Question Section */
