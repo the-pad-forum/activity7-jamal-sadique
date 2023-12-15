@@ -102,7 +102,7 @@ div {
   align-items: center;
   margin-bottom: -0.1rem;
   background-color: transparent;
-  width: 536px; 
+  width: 100%; 
 }
 
 #progress { 
@@ -117,8 +117,10 @@ div {
   padding: .4rem 1rem;
   border-radius: 0.5rem;
   font-size: medium;
+  margin-right: 10%;
 }
 
+/* QUESTIONS and OPTIONS */
 #question { 
   font-size: 1.35rem;
   height: 80px; 
@@ -126,10 +128,14 @@ div {
 
 #options { 
   height: 125px;
+  list-style: none;
 }
 
 #options button {
   position: relative;
+  display: list-item;
+  width: 100%;
+  text-align: left;
 }
 
 .selected-answer, .selected-answer:active, .selected-answer:hover {
@@ -138,6 +144,8 @@ div {
   color: #000;
 }
 
+
+/* `````````````````````````````````*/
 .tooltip {
   visibility: hidden;
   width: auto;
