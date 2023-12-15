@@ -102,13 +102,13 @@ div {
   position: absolute;
   bottom: 0;
   align-items: center;
-  margin-bottom: -0.1rem;
+  margin-bottom: 1.5%;
   background-color: transparent;
   width: 100%; 
 }
 
 #progress { 
- font-size: 1.25rem;
+ font-size: medium;
  font-weight: bold;
  margin-right: auto;
 }
@@ -116,10 +116,12 @@ div {
 #next-question { 
   position: absolute;
   right: 0;
-  padding: .4rem 1rem;
+  padding: .4rem 1.9rem;
   border-radius: 0.5rem;
   font-size: medium;
   margin-right: 10%;
+  background-color: #007bff;
+  border: 1px solid #007bff;
 }
 
 /* QUESTIONS and OPTIONS */

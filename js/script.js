@@ -287,7 +287,7 @@ function loadQuestion(questionIndex) {
   const progressEl = document.getElementById('progress');
 
   // Update progress
-  progressEl.innerText = `Question ${questionIndex + 1} of ${questions.length}`;
+  progressEl.innerText = `${questionIndex + 1} of ${questions.length} Questions`;
 
   // Set the question text
   questionEl.innerText = questions[questionIndex].question;
