@@ -186,8 +186,8 @@ function finishQuiz() {
           label: 'Quiz Results',
           data: [correctAnswersCount, incorrectAnswersCount],
           backgroundColor: [
-            'rgba(0, 128, 0, 0.7)', // Green for correct
-            'rgba(255, 0, 0, 0.7)', // Red for incorrect
+            '#008000b3', // Green for correct
+            '#ff0000b3', // Red for incorrect
           ],
         },
       ],
