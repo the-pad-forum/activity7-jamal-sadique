@@ -48,6 +48,8 @@ div {
   color: #333;
   padding: 1.5rem 2rem;
 }
+
+
 /* HEADER STYLES*/
 #header {
   display: flex;
@@ -89,6 +91,7 @@ div {
   color: rgb(255, 255, 255);
 }
 
+
 /* PROGRESS BAR */
 #progress-bar {
   height: 4px;
@@ -102,13 +105,9 @@ div {
 #progress {
   height: 100%;
   background-color: #2a3fe1;
-  animation: progress-animation 300s forwards;
+  width: 0%;
 }
 
-@keyframes progress-animation {
-  0% {width: 0%;}
-  100% {width: 100%;}
-}
 
 /* Progress & Next Question Section */
 #quiz-container-footer {
@@ -137,6 +136,7 @@ div {
   background-color: #007bff;
   border: 1px solid #007bff;
 }
+
 
 /* QUESTIONS and OPTIONS */
 #question { 

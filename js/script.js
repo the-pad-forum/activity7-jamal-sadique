@@ -431,10 +431,17 @@ document.getElementById('next-question').addEventListener('click', () => {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     loadQuestion(currentQuestionIndex);
+    updateProgressBar(); // Add updateProgressBar function to this event listener.
   } else {
     // Handle end of quiz, such as displaying results
   }
 });
+
+// Add function which updates the progress bar
+function updateProgressBar() {
+  const progressPercentage = (currentQuestionIndex / questions.length) * 100;
+  document.getElementById('progress').style.width = progressPercentage + '%';
+}
 
 document
   .getElementById('quiz-start-btn')
