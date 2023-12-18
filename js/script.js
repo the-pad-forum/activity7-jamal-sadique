@@ -399,7 +399,20 @@ function generatePDF() {
   doc.text(`Incorrect [ no fill ]: ${incorrectAnswers}`, 55, (yPos));
   doc.setFontSize(10);
 
- 
+   /**
+   * Generate personalized feedback
+   * ------------------------------
+   */
+   let feedback = '';
+   if (scorePercentage >= 80) {
+     feedback = 'Excellent work! Keep it up!';
+   } else if (scorePercentage >= 50) {
+     feedback = 'Good effort! Review the incorrect answers to improve further.';
+   } else {
+     feedback =
+       'It looks like you might need some more practice. Try reviewing the material and retaking the quiz.';
+   }
+  
   doc.text(feedback, 25, (yPos += 5)); // Add feedback
   doc.line(20, 270, 190, 270); // Add horizontal line
 
@@ -408,8 +421,7 @@ function generatePDF() {
    * --------------------------------------------
    */
   doc.save('Quiz Report.pdf');
-}
-
+  }
 /** 
  * -----------------------------------------------------------------------------
  * Add event listener for the Next Question button
