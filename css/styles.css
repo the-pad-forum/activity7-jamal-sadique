@@ -90,7 +90,7 @@ div {
 }
 
 /* PROGRESS BAR */
-#progress-container {
+#progress-bar {
   height: 4px;
   background-color: rgb(255, 255, 255);
   position: relative;
@@ -99,7 +99,7 @@ div {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.192);
 }
 
-#progress-bar {
+#progress {
   height: 100%;
   background-color: #2a3fe1;
   animation: progress-animation 300s forwards;
@@ -121,7 +121,7 @@ div {
   width: 100%; 
 }
 
-#progress { 
+#question-count { 
  font-size: medium;
  font-weight: bold;
  margin-right: auto;

@@ -284,7 +284,7 @@ function loadQuestion(questionIndex) {
 
   const questionEl = document.getElementById('question');
   const optionsEl = document.getElementById('options');
-  const progressEl = document.getElementById('progress');
+  const progressEl = document.getElementById('question-count');
 
   // Update progress
   progressEl.innerText = `${questionIndex + 1} of ${questions.length} Questions`;
