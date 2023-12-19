@@ -454,8 +454,6 @@ document
     this.style.display = 'none'; // Hide the start button
   });
 
-
-
 /** 
  * -----------------------------------------------------------------------------
  * Load the first question
