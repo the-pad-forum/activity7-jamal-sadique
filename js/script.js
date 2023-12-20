@@ -253,6 +253,9 @@ function handleOptionSelect(selectedOption, button) {
 
   // Provide visual feedback for selection (optional)
   // For example, change the color of the selected button
+
+  // Add Checkmark
+
 }
 
 /** 
@@ -350,6 +353,7 @@ function generatePDF() {
   doc.setFontSize(11); // Decrease font size for final score and date
   doc.text(scoreSummary, 20, (yPos += 7)); // Add score summary
   doc.text(`Date: ${quizDate}`, 75, yPos); // Add date on the same line as score summary
+  doc.text(`Category: Current Affairs`, 135, yPos); // Add Category name
   doc.setFontSize(12); // Reset font size to default
   doc.line(20, 31, 190, 31); // Add horizontal line
   doc.text('', 20, (yPos += 10)); // Add empty space after horizontal line
@@ -392,11 +396,13 @@ function generatePDF() {
   yPos += 10; // Adjusted yPos after adding questions
   doc.setFontSize(10); // Decrease font size for visualization
   doc.text('Visualization', 23, yPos + 20, { angle: 90 }); // Add vertical text
-  doc.rect(25, yPos, correctAnswers * 3, 20, 'F'); // Bar for correct answers
-  doc.rect(25 + correctAnswers * 3, yPos, incorrectAnswers * 3, 20); // Bar for incorrect answers
+  doc.setFillColor(255, 0, 0);
+  doc.rect(25 + correctAnswers * 3, yPos, incorrectAnswers * 3, 20, 'FD'); // Bar for incorrect answers
+  doc.setFillColor(0, 128, 0);
+  doc.rect(25, yPos, correctAnswers * 3, 20, 'FD'); // Bar for correct answers
   doc.setFontSize(8);
-  doc.text(`Correct [ filled ]: ${correctAnswers}`, 25, (yPos += 24));
-  doc.text(`Incorrect [ no fill ]: ${incorrectAnswers}`, 55, (yPos));
+  doc.text(`Correct [ GREEN ]: ${correctAnswers}`, 25, (yPos += 24));
+  doc.text(`Incorrect [ RED ]: ${incorrectAnswers}`, 55, (yPos));
   doc.setFontSize(10);
 
    /**
@@ -453,8 +459,6 @@ document
     loadQuestion(0); // Load the first question
     this.style.display = 'none'; // Hide the start button
   });
-
-
 
 /** 
  * -----------------------------------------------------------------------------

@@ -95,10 +95,10 @@ div {
 /* PROGRESS BAR */
 #progress-bar {
   height: 4px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   position: relative;
-  margin-left: -6%;
-  margin-right: -6%;
+  margin-left: -2rem;
+  margin-right: -2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.192);
 }
 
@@ -115,9 +115,14 @@ div {
   position: absolute;
   bottom: 0;
   align-items: center;
-  margin-bottom: 1.5%;
+  margin-bottom: 1%;
   background-color: transparent;
   width: 100%; 
+  border-top: 1px solid #ddd;
+  margin-left: -2rem;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+
 }
 
 #question-count { 
@@ -132,7 +137,7 @@ div {
   padding: .4rem 1.9rem;
   border-radius: 0.5rem;
   font-size: medium;
-  margin-right: 10%;
+  margin-right: 2rem;
   background-color: #007bff;
   border: 1px solid #007bff;
 }
@@ -160,7 +165,7 @@ div {
 }
 
 #options button:hover {
-  background-color:  #007bff;
+  background-color:  #d4edda;
   border: 1px solid #f0f8ff;
 }
 
