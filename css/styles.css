@@ -99,7 +99,7 @@ div {
   position: relative;
   margin-left: -2rem;
   margin-right: -2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.192);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.192);
 }
 
 #progress {
@@ -148,6 +148,9 @@ div {
   font-size: 1.25rem;
   height: 80px; 
   font-weight: bold;
+  margin: 1rem 1.4rem -1rem;
+  text-align: left;
+  text-indent: -1.4rem;
 }
 
 #options { 
