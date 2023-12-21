@@ -293,7 +293,7 @@ function loadQuestion(questionIndex) {
   progressEl.innerText = `${questionIndex + 1} of ${questions.length} Questions`;
 
   // Set the question text
-  questionEl.innerText = questions[questionIndex].question;
+  questionEl.innerText = `${questionIndex + 1}. ${questions[questionIndex].question}`;
 
   // Clear previous options
   optionsEl.innerHTML = '';
@@ -459,6 +459,24 @@ document
     loadQuestion(0); // Load the first question
     this.style.display = 'none'; // Hide the start button
   });
+
+/** 
+ * -----------------------------------------------------------------------------
+ * Load the first question
+ * -----------------------------------------------------------------------------
+*/
+function getRemainingTime() {
+  const storedTime = localStorage.getItem('quizStartTime')
+  const startTime = storedTime ? new Date(storedTime) : null;
+
+  if (startTime) {
+    const currentTime = new Date ();
+    const elapsedSeconds = Math.floor((currentTime - startTime) / 1000);
+    return Math.max(totalTime - elapsedSeconds, 0);
+  }
+
+  return totalTime;
+}
 
 /** 
  * -----------------------------------------------------------------------------
