@@ -92,6 +92,26 @@ function formatTime(time) {
   return minutes + ':' + seconds;
 }
 
+/** 
+ * -----------------------------------------------------------------------------
+ * Add feedback function
+ * -----------------------------------------------------------------------------
+ * @param {number} scorePercentage
+*/
+function addFeedback(scorePercentage) {
+  let feedback = '';
+  
+  if (scorePercentage >= 80) {
+    feedback = 'Excellent work! Keep it up!';
+  } else if (scorePercentage >= 50) {
+    feedback = 'Good effort! Review the incorrect answers to improve further.';
+  } else {
+    feedback = 'It looks like you might need some more practice. Try reviewing the material and retaking the quiz.';
+  }
+
+  return feedback;
+}
+
 /**
  * -----------------------------------------------------------------------------
  * Add a function to finish the quiz
@@ -124,19 +144,7 @@ function finishQuiz() {
     <h3 class="review-title">Performance Review</h3>
   `;
 
-  // Generate personalized feedback
-  let feedback = '';
-
-  if (scorePercentage >= 80) {
-    feedback = 'Excellent work! Keep it up!';
-  } else if (scorePercentage >= 50) {
-    feedback = 'Good effort! Review the incorrect answers to improve further.';
-  } else {
-    feedback =
-      'Looks like you might need some more practice. \nTry reviewing the material and retaking the quiz.';
-  }
-
-  resultsHTML += `<p class="feedback">${feedback}</p>`;
+  resultsHTML += `<p class="feedback">${addFeedback(scorePercentage)}</p>`;
 
   // Compile results for each question
   questions.forEach((question, index) => {
@@ -421,17 +429,7 @@ function generatePDF() {
    * Generate personalized feedback
    * ------------------------------
    */
-   let feedback = '';
-   if (scorePercentage >= 80) {
-     feedback = 'Excellent work! Keep it up!';
-   } else if (scorePercentage >= 50) {
-     feedback = 'Good effort! Review the incorrect answers to improve further.';
-   } else {
-     feedback =
-       'It looks like you might need some more practice. Try reviewing the material and retaking the quiz.';
-   }
-  
-  doc.text(feedback, 25, (yPos += 5)); // Add feedback
+  doc.text(addFeedback(scorePercentage) , 25, (yPos += 5)); // Add feedback
   doc.line(20, 270, 190, 270); // Add horizontal line
 
   /**
