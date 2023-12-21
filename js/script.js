@@ -227,6 +227,13 @@ function handleOptionSelect(selectedOption, button) {
   const options = document.querySelectorAll('#options button');
   options.forEach((opt) => opt.classList.remove('selected-answer'));
 
+  // Remove check icon from all buttons
+  options.forEach((opt) => {
+    if(opt.contains(opt.querySelector('i'))) {
+      opt.removeChild(opt.querySelector('i'));
+    }
+  });
+
   // Add tooltip to clicked button
   button.appendChild(tooltip);
 
@@ -242,6 +249,11 @@ function handleOptionSelect(selectedOption, button) {
   setTimeout(() => {
     tooltip.remove();
   }, 1000); // Adjust the time as needed
+
+  // Add check mark icon to clicked button
+  let icon = document.createElement('i');
+  icon.classList.add('fas', 'fa-check');
+  button.appendChild(icon);
 
   // Check if this is the last question
   if (currentQuestionIndex === questions.length - 1) {
