@@ -17,8 +17,6 @@ div {
 
 #options button {
   margin-right: 8px;
-  display: flex;
-  justify-content: space-between;
 }
 
 #quiz-container {
@@ -167,6 +165,11 @@ div {
   text-align: left;
   background-color: #f0f8ff;
   color: #000;
+}
+
+#options button {
+  display: flex;
+  justify-content: space-between;
 }
 
 #options button:hover {
